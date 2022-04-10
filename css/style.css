@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Poppins:wght@500&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    --nav-width: 68px;
+    --header-height: 3rem;
+    --ff-title: 'Poppins', sans-serif;
+    --ff-primary: 'Mulish', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 650;
+
+    --clr-primary: #388087;
+    --clr-secondary: #6fb3b8;
+    --clr-tertiary: #badfe7;
+    --clr-transparent: rgba(206, 224, 234, 0.7);
+    --clr-bg: #f6f6f2;
+    --clr-dark: #000;
+
+    --fs-h1: 3em;
+    --fs-h2: 1.75em;
+    --fs-h3: 1.25em;
+    --fs-body: 1em;
+
+    --bs-light: 0.25em 0.25em 0.75em rgba(0, 0, 0, .15),
+        0.125em 0.125em 0.35em rgba(252, 252, 252, 0.15);
+
+    --bs-dark: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+
+    --z-fixed: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    margin: 0;
+    position: relative;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+html,
+body {
+    min-height: 100%;
+    background-color: var(--clr-bg) !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+::selection {
+    color: var(--clr-bg);
+    background: var(--clr-primary);
+}
+
+@media only screen and (min-width: 450px) {
+    :root {
+
+        --fs-h1: 4em;
+        --fs-h2: 2em;
+        --fs-h3: 1.25em;
+        --fs-body: 1em;
+
+    }
+}
+
+/** Landing Page */
+
+.btn_signin {
+    transition: 0.4s;
+}
+
+.btn_signin:hover {
+    background-color: var(--clr-tertiary);
+}
+
+.section_about {
+    background-color: var(--clr-secondary);
+    margin: 0;
+    padding: 1em 1em;
+    transition: margin .25s linear; 
+    -o-transition: margin .25s linear; 
+    -moz-transition: margin .25s linear; 
+    -webkit-transition: margin .25s linear; 
+}
+
+.section_title {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-title);
+}
+
+.section_subtitle {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    margin: 0.5em 0;
+}
+
+.btn_light {
+    background-color: var(--clr-bg);
+    color: var(--clr-dark);
+    margin: 2em 0;
+    box-shadow: var(--bs-dark);
+}
+
+.btn_light:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+    transition: 0.3s;
+}
+
+.section_publication {
+    margin: 2em 1em;
+}
+
+.section_search {
+    margin: 1em 0 ;
+}
+
+.btn_dark {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+    box-shadow: var(--bs-dark);
+}
+
+.btn_dark:hover {
+    background-color: var(--clr-tertiary);
+    color: var(--clr-dark);
+    transition: 0.3s;
+}
+
+/** Laptop / Tablet interface */
+
+@media only screen and (min-width: 450px) {
+    .nav_logo {
+        margin-left: 2.5em;
+    }
+
+    .container_signin {
+        margin-right: 2em;
+    }
+
+    .section_about {
+        margin: 1em 3em;
+        border-radius: 1em;
+        padding: 2em;
+    }
+
+    .section_publication {
+        margin: 2em 3em;
+    }
+
+}
+
+/** Landing Page End*/
+
+/** Login Page */
+
+.section_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.section_login {
+    padding: 1em;
+}
+
+.container_login {
+    margin: 1em 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_login > img {
+    width: auto;
+    height: 18em;
+}
+
+.container_login > img {
+    display: none;
+}
+
+@media only screen and (min-width: 790px) {   
+    .container_login > img {
+        display: block;
+    }
+}
+
+/** Login Page End */
+
+/** Sign Up Page */
+
+/** Sign Up Page End */
